@@ -18,7 +18,8 @@ export const POST = async (req: NextRequest) => {
         content: json.userPrompt
       },
     ],
-    model: 'deepseek-ai/DeepSeek-V2.5',
+    response_format: { type: 'json_object' },
+    model: 'Qwen/Qwen2.5-72B-Instruct-128K',
   });
   const content = completion.choices[0].message.content;
   return Response.json(content);

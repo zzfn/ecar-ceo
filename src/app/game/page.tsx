@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Dashboard from '@/components/game/Dashboard'
 import GameMain from '@/components/game/GameMain'
 import GameHeader from '@/components/game/GameHeader'
+import DecisionModal from '@/components/game/DecisionModal'
 
 export const metadata: Metadata = {
   title: 'NIO CEO - 游戏控制台',
@@ -16,6 +17,7 @@ export default function GamePage() {
         <Dashboard />
         <GameMain />
       </div>
+      <DecisionModal />
     </main>
   )
 } 
